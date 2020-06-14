@@ -1,10 +1,3 @@
-			// <ul id="list">
-			// 	<li>
-			// 		<p>First note</p> 
-			// 		<p><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></p>
-			// 		<input class="edit-note" type="text">
-			// 	</li>
-
 			var ul = document.querySelector('ul');
 
 			document.getElementById('add-btn').addEventListener('click', 
