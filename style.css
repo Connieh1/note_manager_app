@@ -108,6 +108,24 @@ header #search-note input{
     display: none;
 }
 
+#notes {
+    margin: 20px;
+}
+#notes label {
+    padding: 5px 10px;
+    margin: 10px;
+    border-bottom: 1px solid #777;
+    user-select: none;
+}
+
+#notes label:hover {
+    background: #efefef;
+}
+
+#notes input[type='checkbox'] {
+    display: none;
+}
+
 form#add{
     margin-top: 10px;
     text-align: center;

@@ -1,19 +1,42 @@
-// Lecture: DOM Styles
+			// <ul id="list">
+			// 	<li>
+			// 		<p>First note</p> 
+			// 		<p><i class="fa fa-pencil-square-o"></i><i class="fa fa-times"></i></p>
+			// 		<input class="edit-note" type="text">
+			// 	</li>
 
-/*
-// var h2 = document.querySelector('header h2');
-// console.log(h2);
+			var ul = document.querySelector('ul');
 
-// console.log(h2.style.color = 'red');
-// // console.log(h2.style.background-color = 'green');
-// console.log(h2.style.backgroundColor = 'green');
+			document.getElementById('add-btn').addEventListener('click', 
+				function(e){
+					e.preventDefault();
 
-var lis = document.querySelectorAll('ul li');
-// console.log(lis[1].style.backgroundColor = 'red');
-for(var i = 0; i < lis.length; i++) {
-    console.log(lis[i].style.backgroundColor = 'blue');
-}
+				
+			var addInput = document.getElementById('add-input');
 
-console.log(lis[0].style.cssText = 'background-color: yellow; font-size: 25px;');
-*/
 
+			if(addInput.value != ''){
+			var li = document.createElement('li'),
+					firstPar = document.createElement('p'),
+					secondPar = document.createElement('p'),
+					firstIcon = document.createElement('i'),
+					secondIcon = document.createElement('i'),
+					input = document.createElement('input');
+
+			firstIcon.className = "fa fa-pencil-square-o";
+			secondIcon.className = "fa fa-times";
+			input.className = "edit-note";
+			input.setAttribute('type', "text");
+
+			firstPar.textContent = addInput.value;
+
+
+			secondPar.appendChild(firstIcon);
+			secondPar.appendChild(secondIcon);
+			li.appendChild(firstPar);
+			li.appendChild(secondPar);
+			li.appendChild(input);
+			ul.appendChild(li);
+			addInput.value = '';
+		}	
+	})
